@@ -72,22 +72,6 @@ router.get('/lang', (req, res) => {
     }
 })
 
-let clientId = '7da4547640144bc0bae4990cae740484';
-let clientSecret = '0610ee44c024456e8a90a5e0d94ee63d';
-let redirectUri = 'http://localhost:3000/api/spotify/callback';
-var state = generateRandomString(16);
-var scope = 'user-read-recently-played';
-
-function generateRandomString(length) {
-    var text = '';
-    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
-    for (var i=0; i < length; i++) {
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-    }
-    return text;
-}
-
 
 
 //export
