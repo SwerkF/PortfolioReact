@@ -24,7 +24,12 @@ app.get('/', (req, res) => {
 const routes = require('./src/routes/routes');
 
 app.use('/api', routes);
+//image route for images in src/imgs/*
+app.use('/api/imgs', express.static('src/imgs'));
+app.use('/api/docs', express.static('src/download'));
 
 app.listen(3000, () => {
     console.log('Server running on port 3000');
 })
+
+

@@ -18,7 +18,7 @@ const Projets = () => {
             .then(data => {
                 setProjets(data)
             })
-    })
+    }, [])
 
     setTimeout(() => {
         console.log(projets)
@@ -29,7 +29,7 @@ const Projets = () => {
             <div className="container text-center">
                 <div className="row">
                     <h2 className="f-syne-black title-projets pt-12 z-2" data-aos="fade-up">projets 💻</h2>
-                    <div className="row row-no-mr no-padding-row-left-right justify-content-around">
+                    <div className="row row-no-mr no-padding-row-left-right justify-content-center">
                         {projets.map((projet, index) => {
                             if(projet.perso == 0) {
                                 return (
@@ -41,7 +41,7 @@ const Projets = () => {
                 </div>
                 <div className="row">
                     <h2 className="f-syne-black title-projets pt-12 z-2" data-aos="fade-up">perso.</h2>
-                    <div className="row row-no-mr no-padding-row-left-right justify-content-around">
+                    <div className="row row-no-mr no-padding-row-left-right justify-content-center">
                         {projets.map((projet, index) => {
                             if(projet.perso == 1) {
                                 return (

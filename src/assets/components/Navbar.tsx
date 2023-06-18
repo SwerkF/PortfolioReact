@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
     <div className="custom-nav">
         <div className="d-flex">
-            <p className="align-items-center f-syne-black color-white w-100 logo"><span className="hover-text-animate-b">O</span><span className="hover-text-animate-p">S</span></p>
+            <p className="align-items-center f-syne-black color-white w-100 logo"><span className="hover-text-animate-b" data-aos="fade-up" data-aos-delay="200">O</span><span className="hover-text-animate-p"  data-aos="fade-down" data-aos-delay="300">S</span></p>
             <p className="align-items-center f-syne-black color-white w-100 logo-min"><span className="hover-text-animate-b" data-aos-delay="1500">Oliwer </span><span className="hover-text-animate-p">Skweres</span></p>
             <div className="d-flex">
             <a className="align-items-center nav-item f-syne-black color-white" data-aos="fade-down" data-aos-delay="1000">•&nbsp;ACCUEIL</a>

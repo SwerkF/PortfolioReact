@@ -4,9 +4,9 @@ const Landing = () => {
     return (
     <>
         <div className="landing">
-            <div className="square">
+            <div className="square" data-aos="fade-right" data-aos-delay="100">
                 <div className="inner-square">
-                <div className="inner d-flex flex-column justify-content-between h-100">
+                <div className="inner d-flex flex-column justify-content-between h-100"  data-aos="fade-right" data-aos-delay="200">
                     <h1 className="text-os color-white f-krona">O<span className="color-br">S</span></h1>
                     <h2 className="text-os2 color-white f-krona">OLIWER <span className="color-br">S</span>KWERES</h2>
                 </div>
