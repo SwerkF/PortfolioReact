@@ -14,8 +14,6 @@ const SquareLarge = (props:SquareLargeProps) => {
         window.open(`http://localhost:3000/api/docs/${props.file}`);
     }
 
-    console.log(props)
-
     return (
         <div className="col square-s-big" data-aos="fade-right">
             <h3 className="f-syne-black title-s">{props.title}</h3>

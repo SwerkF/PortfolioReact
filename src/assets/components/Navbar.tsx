@@ -12,7 +12,8 @@ const Navbar = () => {
             <a className="align-items-center nav-item f-syne-black color-white" href="#projets" data-aos="fade-down" data-aos-delay="1200">•&nbsp;PROJETS</a>
             <a className="align-items-center nav-item f-syne-black color-white" href="#stages" data-aos="fade-down" data-aos-delay="1300">•&nbsp;STAGES</a>
             <a className="align-items-center nav-item f-syne-black color-white" href="#certif" data-aos="fade-down" data-aos-delay="1400">•&nbsp;CERTIF</a>
-            <a className="align-items-center nav-item-last f-syne-black color-white" href="#veilles" data-aos="fade-down" data-aos-delay="1500">•&nbsp;VEILLES</a>
+            <a className="align-items-center nav-item f-syne-black color-white" href="#photos" data-aos="fade-down" data-aos-delay="1500">•&nbsp;PHOTOS</a>
+            <a className="align-items-center nav-item-last f-syne-black color-white" href="#veilles" data-aos="fade-down" data-aos-delay="1600">•&nbsp;VEILLES</a>
             </div>
         </div>
     </div>

@@ -20,10 +20,6 @@ const Projets = () => {
             })
     }, [])
 
-    setTimeout(() => {
-        console.log(projets)
-    }, 3000)
-
     return (
         <div className="section-projets" id="projets">
             <div className="container text-center">

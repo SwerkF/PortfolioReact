@@ -9,7 +9,8 @@ const Veilles = () => {
         fetch('http://localhost:3000/api/veilles')
         .then(res => res.json())
         .then(data => setVeilles(data))
-    })
+    }, [])
+    
     return (
         <div className="section-veilles" id="veilles">
             <div className="container text-center">

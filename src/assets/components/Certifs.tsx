@@ -10,6 +10,7 @@ const Certifs = () => {
             .then(response => response.json())
             .then(data => setCertifs(data));
     }, [])
+    
     return (
         <div className="section-certifs" id="certif"> 
       <div className="container text-center">

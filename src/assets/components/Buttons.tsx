@@ -1,8 +1,44 @@
+import React, {useState, useEffect} from "react";
+
 const Buttons = () => {
+
+    const [show, setShow] = useState<boolean>(false)
+    const [keys, setKeys] = useState<any[]>([])
+    
+    //listen if user typed konami code, if yes, show buttons
+    useEffect(() => {
+        if(show) return;
+        const konamiCode = [
+            "ArrowUp",
+            "ArrowUp",
+            "ArrowDown",
+            "ArrowDown",
+            "ArrowLeft",
+            "ArrowRight",
+            "ArrowLeft",
+            "ArrowRight",
+            "b",
+            "a"
+        ];
+        let index = 0;
+        const keydownHandler = ({key}: any) => {
+            index = (key === konamiCode[index]) ? index + 1 : 0;
+            if (index === konamiCode.length) {
+                const kuru = Math.random() < 0.5 ? "kuru" : "kuru2";
+                const audio = new Audio(`src/assets/sounds/${kuru}.mp3`);
+                audio.play();
+                alert("Konami Code Activated !");
+                setShow(true);
+            }
+        };
+        window.addEventListener("keydown", keydownHandler);
+        return () => window.removeEventListener("keydown", keydownHandler);
+    }, []);
 
     const backTop = () => {
         window.scrollTo(0, 0);
     }
+
 
     const changeColor = () => {
         const colors = [
@@ -67,9 +103,12 @@ const Buttons = () => {
             <button className="button-color-shuffle" onClick={() => changeColor()}>
                 <i className="fas fa-palette"></i>
             </button>
+            {show &&
             <button className="button-kuru" onClick={() => KuruPlay()}>
                 <img src="src/assets/imgs/kuru.gif" alt="Kuru" className="kuru" width="60"/>
             </button>
+            }
+            
         </div>
     );
 };

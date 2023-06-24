@@ -27,6 +27,8 @@ app.use('/api', routes);
 //image route for images in src/imgs/*
 app.use('/api/imgs', express.static('src/imgs'));
 app.use('/api/docs', express.static('src/download'));
+app.use('/api/photos', express.static('src/photos'));
+app.use('/api/uncompressed', express.static('src/uncompressed'));
 
 app.listen(3000, () => {
     console.log('Server running on port 3000');
